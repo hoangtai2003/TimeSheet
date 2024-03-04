@@ -21,5 +21,12 @@ Route::get('/home', function () {
     return view('admin.home');
 });
 Route::prefix('admin')->group(function () {
-    Route::get('/users', [UserAdminController::class, 'list'])->name('users.list');
+    Route::prefix('users')->group(function (){
+        Route::get('/list', [UserAdminController::class, 'list'])->name('users.list');
+        Route::get('/create', [UserAdminController::class, 'create'])->name('users.create');
+        Route::post('/store', [UserAdminController::class, 'store'])->name('users.store');
+        Route::get('/edit/{id}', [UserAdminController::class, 'edit'])->name('users.edit');
+        Route::post('/update/{id}', [UserAdminController::class, 'update'])->name('users.update');
+        Route::get('/delete/{id}', [UserAdminController::class, 'delete'])->name('users.delete');
+    });
 });
