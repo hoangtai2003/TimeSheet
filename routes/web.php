@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAdminController;
+use App\Http\Controllers\AuthenAdminController;
+use  App\Http\Controllers\HomeAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,14 @@ use App\Http\Controllers\UserAdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/home', [HomeAdminController::class, 'home'])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
-    return view('admin.home');
-});
+Route::get('/login', [AuthenAdminController::class, 'login'])->name('login');
+Route::get('/register', [AuthenAdminController::class, 'register'])->name('register');
+Route::post('/register/store', [AuthenAdminController::class, 'registerStore'])->name('register.store');
+Route::post('/login/store', [AuthenAdminController::class, 'loginStore'])->name('login.store');
+Route::get('/logout', [AuthenAdminController::class, 'logout'])->name('logout');
+
 Route::prefix('admin')->group(function () {
     Route::prefix('users')->group(function (){
         Route::get('/list', [UserAdminController::class, 'list'])->name('users.list');

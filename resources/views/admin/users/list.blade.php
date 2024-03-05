@@ -32,7 +32,7 @@
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>
-                                        <a href="{{route('users.permission', ['id' => $user->id])}}" class="btn btn-info">Phân quyền</a>
+                                        <a href="" class="btn btn-info">Phân quyền</a>
                                     </td>
                                     <td>
                                         <a href="{{route('users.edit', ['id' => $user->id])}}" class="btn btn-default">Edit</a>
