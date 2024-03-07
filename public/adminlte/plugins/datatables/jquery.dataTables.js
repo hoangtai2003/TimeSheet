@@ -1649,7 +1649,7 @@
 	/**
 	 * DataTables utility methods
 	 *
-	 * This namespace provides helper methods that DataTables uses internally to
+	 * This namespace provides Helper methods that DataTables uses internally to
 	 * create a DataTable, but which are not exclusively used only for DataTables.
 	 * These methods can be used by extension authors to save the duplication of
 	 * code.
@@ -6973,7 +6973,7 @@
 	 * `rows().nodes()` will return an array of nodes, while `rows().data()` will
 	 * return an array of objects or arrays depending upon your table's
 	 * configuration). The API object has a number of array like methods (`push`,
-	 * `pop`, `reverse` etc) as well as additional helper methods (`each`, `pluck`,
+	 * `pop`, `reverse` etc) as well as additional Helper methods (`each`, `pluck`,
 	 * `unique` etc) to assist your working with the data held in a table.
 	 *
 	 * Most methods (those which return an Api instance) are chainable, which means
@@ -12044,8 +12044,8 @@
 		 *     </li>
 		 *     <li>The following constants are allowed:
 		 *       <ul>
-		 *         <li>'H' - jQueryUI theme "header" classes ('fg-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix')</li>
-		 *         <li>'F' - jQueryUI theme "footer" classes ('fg-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix')</li>
+		 *         <li>'H' - jQueryUI theme "header" classes ('fg-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-Helper-clearfix')</li>
+		 *         <li>'F' - jQueryUI theme "footer" classes ('fg-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-Helper-clearfix')</li>
 		 *       </ul>
 		 *     </li>
 		 *     <li>The following syntax is expected:
@@ -15096,9 +15096,9 @@
 	} );
 
 	/*
-	 * Public helper functions. These aren't used internally by DataTables, or
+	 * Public Helper functions. These aren't used internally by DataTables, or
 	 * called by any of the options passed into DataTables, but they can be used
-	 * externally by developers working with DataTables. They are helper functions
+	 * externally by developers working with DataTables. They are Helper functions
 	 * to make working with DataTables a little bit easier.
 	 */
 

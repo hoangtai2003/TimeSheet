@@ -7109,7 +7109,7 @@ __webpack_require__(561);
       /**
        * Creates shortcut functions to a cipher's object interface.
        *
-       * @param {Cipher} cipher The cipher to create a helper for.
+       * @param {Cipher} cipher The cipher to create a Helper for.
        *
        * @return {Object} An object with encrypt and decrypt shortcut functions.
        *
@@ -8589,7 +8589,7 @@ __webpack_require__(561);
       /**
        * Creates a shortcut function to a hasher's object interface.
        *
-       * @param {Hasher} hasher The hasher to create a helper for.
+       * @param {Hasher} hasher The hasher to create a Helper for.
        *
        * @return {Function} The shortcut function.
        *
@@ -8608,7 +8608,7 @@ __webpack_require__(561);
       /**
        * Creates a shortcut function to the HMAC's object interface.
        *
-       * @param {Hasher} hasher The hasher to use in this HMAC helper.
+       * @param {Hasher} hasher The hasher to use in this HMAC Helper.
        *
        * @return {Function} The shortcut function.
        *
@@ -37973,7 +37973,7 @@ var store = __webpack_require__(5465);
 
 var functionToString = uncurryThis(Function.toString);
 
-// this helper broken in `core-js@3.4.1-3.4.4`, so we can't use `shared` helper
+// this Helper broken in `core-js@3.4.1-3.4.4`, so we can't use `shared` Helper
 if (!isCallable(store.inspectSource)) {
   store.inspectSource = function (it) {
     return functionToString(it);
@@ -49989,7 +49989,7 @@ var runtime = (function (exports) {
   }
   exports.wrap = wrap;
 
-  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // Try/catch Helper to minimize deoptimizations. Returns a completion
   // record like context.tryEntries[i].completion. This interface could
   // have been (and was previously) designed to take a closure to be
   // invoked without arguments, but in all the cases we care about we
@@ -50153,7 +50153,7 @@ var runtime = (function (exports) {
         ) : callInvokeWithMethodAndArg();
     }
 
-    // Define the unified helper method that is used to implement .next,
+    // Define the unified Helper method that is used to implement .next,
     // .throw, and .return (see defineIteratorMethods).
     this._invoke = enqueue;
   }
@@ -50344,7 +50344,7 @@ var runtime = (function (exports) {
   }
 
   // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
+  // unified ._invoke Helper method.
   defineIteratorMethods(Gp);
 
   define(Gp, toStringTagSymbol, "Generator");
@@ -78217,7 +78217,7 @@ TableProcessor.prototype.beginTable = function (writer) {
 			}
 		}
 
-		// helper function to set the border for a given cell
+		// Helper function to set the border for a given cell
 		function setBorder(rowIndex, colIndex, borderIndex, borderValue) {
 			var cell = body[rowIndex][colIndex];
 			cell.border = cell.border || {};

@@ -1239,7 +1239,7 @@ utils.inherits(NodejsStreamOutputAdapter, Readable);
 * A nodejs stream using a worker as source.
 * @see the SourceWrapper in http://nodejs.org/api/stream.html
 * @constructor
-* @param {StreamHelper} helper the helper wrapping the worker
+* @param {StreamHelper} helper the Helper wrapping the worker
 * @param {Object} options the nodejs stream options
 * @param {Function} updateCb the update callback.
 */
@@ -2572,7 +2572,7 @@ function concat (type, dataArray) {
 /**
  * Listen a StreamHelper, accumulate its content and concatenate it into a
  * complete block.
- * @param {StreamHelper} helper the helper to use.
+ * @param {StreamHelper} helper the Helper to use.
  * @param {Function} updateCallback a callback called on each update. Called
  * with one arg :
  * - the metadata linked to the update received.
@@ -2609,7 +2609,7 @@ function accumulate(helper, updateCallback) {
 }
 
 /**
- * An helper to easily use workers outside of JSZip.
+ * An Helper to easily use workers outside of JSZip.
  * @constructor
  * @param {Worker} worker the worker to wrap
  * @param {String} outputType the type of data expected by the use
@@ -2659,7 +2659,7 @@ StreamHelper.prototype = {
      * Add a listener on an event triggered on a stream.
      * @param {String} evt the name of the event
      * @param {Function} fn the listener
-     * @return {StreamHelper} the current helper.
+     * @return {StreamHelper} the current Helper.
      */
     on : function (evt, fn) {
         var self = this;
@@ -2677,7 +2677,7 @@ StreamHelper.prototype = {
     },
     /**
      * Resume the flow of chunks.
-     * @return {StreamHelper} the current helper.
+     * @return {StreamHelper} the current Helper.
      */
     resume : function () {
         utils.delay(this._worker.resume, [], this._worker);
@@ -2685,14 +2685,14 @@ StreamHelper.prototype = {
     },
     /**
      * Pause the flow of chunks.
-     * @return {StreamHelper} the current helper.
+     * @return {StreamHelper} the current Helper.
      */
     pause : function () {
         this._worker.pause();
         return this;
     },
     /**
-     * Return a nodejs stream for this helper.
+     * Return a nodejs stream for this Helper.
      * @param {Function} updateCb the update callback.
      * @return {NodejsStreamOutputAdapter} the nodejs stream.
      */
@@ -3122,7 +3122,7 @@ function stringToArrayLike(str, array) {
 }
 
 /**
- * An helper for the function arrayLikeToString.
+ * An Helper for the function arrayLikeToString.
  * This contains static information and functions that
  * can be optimized by the browser JIT compiler.
  */

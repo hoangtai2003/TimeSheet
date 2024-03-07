@@ -8335,7 +8335,7 @@ function splitNewlines(str) {
 
 
 /**
- * Private helper to create a tooltip item model
+ * Private Helper to create a tooltip item model
  * @param element - the chart element (point, arc, bar) to create the tooltip item for
  * @return new tooltip item
  */
@@ -10688,7 +10688,7 @@ var core_helpers = function() {
 
 	};
 
-	// Private helper function to convert max-width/max-height values that may be percentages into a number
+	// Private Helper function to convert max-width/max-height values that may be percentages into a number
 	function parseMaxStyle(styleValue, node, parentProperty) {
 		var valueInPixels;
 		if (typeof styleValue === 'string') {
@@ -19063,7 +19063,7 @@ var moment = createCommonjsModule(function (module, exports) {
         M : 11          // months to year
     };
 
-    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
+    // Helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
     function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
         return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
     }

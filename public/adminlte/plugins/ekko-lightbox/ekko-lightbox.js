@@ -236,7 +236,7 @@ var Lightbox = (function ($) {
 				return this._$modal.modal('hide');
 			}
 
-			// helper private methods
+			// Helper private methods
 		}, {
 			key: '_navigationalBinder',
 			value: function _navigationalBinder(event) {

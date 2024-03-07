@@ -27,15 +27,23 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="{{route('users.list')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa-solid fa-users"></i>
                         <p>
                             Danh sách nhân viên
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('roles.list')}}" class="nav-link">
+                        <i class="fa-solid fa-users"></i>
+                        <p>
+                            Danh sách vai trò
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('logout')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fa-solid fa-right-from-bracket"></i>
                         <p>
                             Đăng xuất
                         </p>

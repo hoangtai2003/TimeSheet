@@ -1917,7 +1917,7 @@ var store = __webpack_require__(5465);
 
 var functionToString = Function.toString;
 
-// this helper broken in `3.4.1-3.4.4`, so we can't use `shared` helper
+// this Helper broken in `3.4.1-3.4.4`, so we can't use `shared` Helper
 if (typeof store.inspectSource != 'function') {
   store.inspectSource = function (it) {
     return functionToString.call(it);

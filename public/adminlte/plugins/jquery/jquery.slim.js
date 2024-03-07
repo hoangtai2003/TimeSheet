@@ -3987,7 +3987,7 @@ jQuery.extend( {
 		return deferred;
 	},
 
-	// Deferred helper
+	// Deferred Helper
 	when: function( singleValue ) {
 		var
 

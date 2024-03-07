@@ -21,7 +21,6 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Tên</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Phân quyền</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -31,9 +30,6 @@
                                     <th scope="row">{{$user->id}}</th>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">Phân quyền</a>
-                                    </td>
                                     <td>
                                         <a href="{{route('users.edit', ['id' => $user->id])}}" class="btn btn-default">Edit</a>
                                         <a href="{{route('users.delete', ['id' => $user->id])}}"

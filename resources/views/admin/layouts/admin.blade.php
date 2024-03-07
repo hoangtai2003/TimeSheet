@@ -20,5 +20,6 @@
 <script src="{{asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
 <script src="{{asset('https://use.fontawesome.com/releases/v6.3.0/js/all.js')}}" crossorigin="anonymous"></script>
+@yield('js')
 </body>
 </html>

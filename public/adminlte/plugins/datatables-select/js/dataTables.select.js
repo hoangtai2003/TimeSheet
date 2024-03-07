@@ -215,7 +215,7 @@ been created for rows / cells (DataTables' defer rendering feature).
 A range of API methods are available for triggering selection and de-selection
 of rows. Methods are also available to configure the selection events that can
 be triggered by an end users (such as which items are to be selected). To a large
-extent, these of API methods *is* Select. It is basically a collection of helper
+extent, these of API methods *is* Select. It is basically a collection of Helper
 functions that can be used to select items in a DataTable.
 
 Configuration of select is held in the object `_select` which is attached to the

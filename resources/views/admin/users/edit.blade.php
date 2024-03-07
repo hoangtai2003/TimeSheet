@@ -4,6 +4,27 @@
         Trang chủ
     </title>
 @endsection
+@section('css')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        .select2-selection__choice{
+            background-color: #0c525d !important;
+        }
+        .select2-container--default .select2-selection__choice__display{
+            padding-left: 8px !important;
+        }
+
+    </style>
+@endsection
+
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $('.select2_init').select2({
+            'placeholder': 'Chọn vai trò'
+        })
+    </script>
+@endsection
 @section('content')
     <div class="content-wrapper">
         <div class="content">
@@ -37,6 +58,16 @@
                                         class="form-control "
                                         name = "password"
                                         placeholder="Nhập password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Chọn vai trò</label>
+                                    <select name="role_id[]" class="form-control select2_init" multiple>
+                                        <option value=""></option>
+                                        @foreach($roles as $role)
+                                            <option {{ $rolesOfUser->contains($role->id) ? 'selected' : ''}}
+                                                value="{{$role->id}}">{{$role->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
