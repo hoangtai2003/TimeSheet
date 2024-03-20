@@ -5,6 +5,7 @@ use App\Http\Controllers\UserAdminController;
 use App\Http\Controllers\AuthenAdminController;
 use  App\Http\Controllers\HomeAdminController;
 use App\Http\Controllers\RoleAdminController;
+use App\Http\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\RoleAdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/home', [HomeAdminController::class, 'home'])->name('home');
+Route::middleware([Authenticate::class])->get('/home', [HomeAdminController::class, 'home'])->name('home');
 
 Route::get('/login', [AuthenAdminController::class, 'login'])->name('login');
 Route::get('/register', [AuthenAdminController::class, 'register'])->name('register');

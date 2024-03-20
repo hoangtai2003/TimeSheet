@@ -29,7 +29,7 @@ class AuthenAdminController extends Controller
         $token = $user->createToken('token')->plainTextToken;
         $cookie = cookie ('jwt', $token, 60 * 24);
 
-        return redirect('/home')->withCookie($cookie);
+        return redirect('home')->withCookie($cookie);
     }
     public  function registerStore(Request $request){
         if ($request->input('password') != $request->input('cpassword')){
